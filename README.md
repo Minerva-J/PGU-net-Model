@@ -10,14 +10,13 @@ Paper link
 python 3.7, CUDA 10.1, numpy 1.17, matplotlib 3.1.1, scikit-image (0.21), scipy (0.3.1), pyparsing (2.4.2), pytorch (1.0) (anaconda is recommended)
 other packages could be the latest version.
 
-# Instructions for runing
-
 # Training:
 
-# 1.Install all dependencies
+1.Install all dependencies
 
-# 2.For PGU-net+: Progressive Growing of U-net+,
+2.For PGU-net+: Progressive Growing of U-net+,
 python train_PG.py
+
 For the U-net structure in the ﬁnal stag,
 python train.py
 

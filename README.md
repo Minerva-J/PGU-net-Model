@@ -2,7 +2,7 @@
 
 This is my contribution to the "PGU-net+: Progressive Growing of U-net+ for Automated Cervical Nuclei Segmentation" in MICCAI2019 workshop MMMI.
 
-Paper link
+Paper link: http://arxiv.org/abs/1911.01062
  Please cite this paper if you find this project helpful for your research.
 
 # Dependencies

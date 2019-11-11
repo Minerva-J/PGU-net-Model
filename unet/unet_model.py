@@ -74,10 +74,10 @@ class UNet3(nn.Module):
         x6 = self.outc2(x6)
         x7 = self.outc3(x7)
 		
-        # x5 = nn.functional.interpolate(x5, scale_factor=(4, 4), mode='bilinear', align_corners=True)
+        x5 = nn.functional.interpolate(x5, scale_factor=(4, 4), mode='bilinear', align_corners=True)
         x6 = nn.functional.interpolate(x6, scale_factor=(2, 2), mode='bilinear', align_corners=True)
-        # x = x5 + x6 + x7
-        x = x6 + x7
+        x = x5 + x6 + x7
+        # x = x6 + x7
         x = self.LS(x)
         # print('x', x.shape)
         return x
@@ -116,11 +116,11 @@ class UNet4(nn.Module):
         x7 = self.outc2(x7)
         x8 = self.outc3(x8)
         x9 = self.outc4(x9)
-        # x6 = nn.functional.interpolate(x6, scale_factor=(8, 8), mode='bilinear', align_corners=True)
-        # x7 = nn.functional.interpolate(x7, scale_factor=(4, 4), mode='bilinear', align_corners=True)
+        x6 = nn.functional.interpolate(x6, scale_factor=(8, 8), mode='bilinear', align_corners=True)
+        x7 = nn.functional.interpolate(x7, scale_factor=(4, 4), mode='bilinear', align_corners=True)
         x8 = nn.functional.interpolate(x8, scale_factor=(2, 2), mode='bilinear', align_corners=True)
-        # x = x6 + x7 + x8 + x9
-        x = x8 + x9
+        x = x6 + x7 + x8 + x9
+        # x = x8 + x9
         x = self.LS(x)
         # print('x', x.shape)
         return x

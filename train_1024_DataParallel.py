@@ -103,4 +103,3 @@ if __name__ == '__main__':
         end_time =  datetime.datetime.now()
         print('end_time', end_time)
         print('time', (end_time - start_time).seconds)
-        print('time', stop)

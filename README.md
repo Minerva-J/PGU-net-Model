@@ -50,4 +50,5 @@ python train_1024_apex.py for apex
 python train_1024_horovod.py for horovod
 
 实验结果如下图（apex和horovod存在一些bug）：
+
 <img src="./D-D-M.png" width=50%>

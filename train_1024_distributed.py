@@ -22,8 +22,6 @@ from unet.unet_model import UNet4
 import random
 import argparse
 import torch.distributed as dist
-# import torch.multiprocessing as mp
-#torch.multiprocessing 会帮助我们自动创建进程，spawn 开启了 nprocs=4 个线程，每个线程执行 main_worker 并向其中传入 local_rank（当前进程 index）和 args（即 4 和 myargs）作为参数
 
 parser = argparse.ArgumentParser(description='使用 torch.distributed 加速并行训练')
 
@@ -128,6 +126,5 @@ def main_worker(gpu, ngpus_per_node, args):
         end_time =  datetime.datetime.now()
         print('end_time', end_time)
         print('time', (end_time - start_time).seconds)
-        print('time', stop)
 if __name__ == '__main__':
     main()

@@ -132,6 +132,5 @@ def main_worker(gpu, ngpus_per_node, args):
         end_time =  datetime.datetime.now()
         print('end_time', end_time)
         print('time', (end_time - start_time).seconds)
-        print('time', stop)
 if __name__ == '__main__':
     main()

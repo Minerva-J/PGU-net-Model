@@ -26,6 +26,7 @@ python test.py
 
 # Distributed training mode
 In the later stage, several parallel and distributed training methods of multi GPU are added，参考自https://github.com/tczhangzhi/pytorch-distributed
+
 1.nn.DataParallel 简单方便的 nn.DataParallel
 
 2.torch.distributed 使用 torch.distributed 加速并行训练
@@ -35,11 +36,18 @@ In the later stage, several parallel and distributed training methods of multi G
 4.apex 使用 apex 再加速
 
 5.horovod horovod 的优雅实现
-For the U-net structure with 5 distributed training methods above,
+
+For the U-net structure with 5 distributed training methods above
+
 python train_1024_DataParallel.py for nn.DataParallel
+
 python train_1024_distributed.py for torch.distributed
+
 python train_1024_multiprocessing.py for torch.multiprocessing
+
 python train_1024_apex.py for apex
+
 python train_1024_horovod.py for horovod
 
 实验结果如下图（apex和horovod存在一些bug）：
+

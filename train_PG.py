@@ -68,7 +68,7 @@ if __name__ == '__main__':
     LR_DECAY = 0.95
     DECAY_EVERY_N_EPOCHS = 40
     criterion = nn.NLLLoss(weight=data_PG.class_weight.cuda()).cuda()
-    
+    base_params = list(map(id, model.parameters()))
     for epoch in range(1, epoch_num):
           #################EE########################################
         
@@ -100,7 +100,7 @@ if __name__ == '__main__':
             EE0 = EE
             pretrained_dict0 = model.state_dict()
             
-            base_params = list(map(id, model.parameters()))
+            
             
             
             optimizer1 = torch.optim.RMSprop(params, lr=LR, weight_decay=1e-4)
